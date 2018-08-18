@@ -11,17 +11,17 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
  
 public class XMLUtils {
-    //该方法用于从XML配置文件中提取图表类型，并返回类型名
+    //锟矫凤拷锟斤拷锟斤拷锟节达拷XML锟斤拷锟斤拷锟侥硷拷锟斤拷锟斤拷取图锟斤拷锟斤拷锟酵ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
 	public static String getChartType() {
 		try {
-			//创建文档对象
+			//锟斤拷锟斤拷锟侥碉拷锟斤拷锟斤拷
 			DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = dFactory.newDocumentBuilder();
 			Document doc;							
-			doc = builder.parse(new File("src/designPattern/AbstractFactory/config.xml")); 
+			doc = builder.parse(new File("src/main/java/designPattern/TempleteMathodPattern/config.xml")); 
 		
-			//获取包含图表类型的文本节点
-			NodeList nl = doc.getElementsByTagName("chartType");
+			//锟斤拷取锟斤拷锟斤拷图锟斤拷锟斤拷锟酵碉拷锟侥憋拷锟节碉拷
+			NodeList nl = doc.getElementsByTagName("className");
             Node classNode = nl.item(0).getFirstChild();
             String chartType = classNode.getNodeValue().trim();
             return chartType;
